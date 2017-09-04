@@ -25,8 +25,9 @@ RUN \
 	python-sabyenc \
 	sabnzbdplus \
 	unrar \
+	ffmpeg \
+	git \
 	unzip && \
-
 # cleanup
  apt-get clean && \
  rm -rf \
