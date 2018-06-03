@@ -38,7 +38,7 @@ RUN \
 # add local files
 COPY root/ /
 
-RUN mkdir /scripts && git clone https://github.com/clinton-hall/nzbToMedia.git /scripts && cp /scripts/autoProcessMedia.cfg.spec /scripts/autoProcessMedia.cfg
+RUN mkdir /scripts && git clone https://github.com/clinton-hall/nzbToMedia.git /scripts && cp /scripts/autoProcessMedia.cfg.spec /scripts/autoProcessMedia.cfg && mkdir /scripts/logs && chmod 777 /scripts/logs
 
 # ports and volumes
 EXPOSE 8080 9090
