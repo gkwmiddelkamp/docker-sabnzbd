@@ -38,6 +38,8 @@ RUN \
 # add local files
 COPY root/ /
 
+RUN mkdir /scripts && git clone https://github.com/clinton-hall/nzbToMedia.git /scripts && cp /scripts/autoProcessMedia.cfg.spec /scripts/autoProcessMedia.cfg
+
 # ports and volumes
 EXPOSE 8080 9090
 VOLUME /config /downloads /incomplete-downloads
