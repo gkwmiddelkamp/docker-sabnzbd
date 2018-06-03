@@ -40,6 +40,27 @@ It is based on ubuntu xenial with s6 overlay, for shell access whilst the contai
 Will be cloned from https://github.com/clinton-hall/nzbToMedia. See the page for an example config.
 To use these scripts, configure SABnzbd to use the /scripts directory for scripts.
 
+## Docker compose
+See the code below for an example Docker compose file
+
+```
+version: '2'
+
+services:
+   sabnzbd:
+      restart: 'always'
+      image: gkwmiddelkamp/docker-sabnzbd
+      environment:
+         - TZ=Europa/Amsterdam
+      ports:
+         - 8080:8080
+      volumes:
+         - <path to config dir>:/config
+         - <path to autoProcessMedia.cfg>:/scripts/autoProcessMedia.cfg
+         - <path to downloads>:/downloads
+         - <path to incomplete downloads>:/incomplete-downloads
+```
+
 ### User / Group Identifiers
 
 Sometimes when using data volumes (`-v` flags) permissions issues can arise between the host OS and the container. We avoid this issue by allowing you to specify the user `PUID` and group `PGID`. Ensure the data volume directory on the host is owned by the same user you specify and it will "just work" ™.
