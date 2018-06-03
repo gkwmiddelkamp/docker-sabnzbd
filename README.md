@@ -36,6 +36,10 @@ http://192.168.x.x:8080 would show you what's running INSIDE the container on po
 
 It is based on ubuntu xenial with s6 overlay, for shell access whilst the container is running do `docker exec -it sabnzbd /bin/bash`.
 
+## nzbToMedia
+Will be cloned from https://github.com/clinton-hall/nzbToMedia. See the page for an example config.
+To use these scripts, configure SABnzbd to use the /scripts directory for scripts.
+
 ### User / Group Identifiers
 
 Sometimes when using data volumes (`-v` flags) permissions issues can arise between the host OS and the container. We avoid this issue by allowing you to specify the user `PUID` and group `PGID`. Ensure the data volume directory on the host is owned by the same user you specify and it will "just work" ™.
