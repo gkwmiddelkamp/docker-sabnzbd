@@ -1,10 +1,6 @@
 # gkwmiddelkamp/docker-sabnzbd
-[![](https://images.microbadger.com/badges/version/linuxserver/sabnzbd.svg)](https://microbadger.com/images/linuxserver/sabnzbd "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/linuxserver/sabnzbd.svg)](https://microbadger.com/images/linuxserver/sabnzbd "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/sabnzbd.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/linuxserver/sabnzbd.svg)][hub][![Build Status](https://ci.linuxserver.io/buildStatus/icon?job=Docker-Builders/x86-64/x86-64-sabnzbd)](https://ci.linuxserver.io/job/Docker-Builders/job/x86-64/job/x86-64-sabnzbd/)
-
 SABnzbd makes Usenet as simple and streamlined as possible by automating everything we can. All you have to do is add an .nzb. SABnzbd takes over from there, where it will be automatically downloaded, verified, repaired, extracted and filed away with zero human interaction.
 This image includes nzbToMedia scripts and ffmpeg for processing.
-
-[![sabnzbd](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/sabnzbd-banner.png)][appurl]
 
 ## Usage
 
