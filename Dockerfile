@@ -22,6 +22,7 @@ RUN \
  apt-key adv --keyserver hkp://keyserver.ubuntu.com:11371 --recv-keys 0x98703123E0F52B2BE16D586EF13930B14BB9F05F && \
  apt-get update && \
  apt-get install -y \
+	python3 \
 	p7zip-full \
 	par2-tbb \
 	python-sabyenc \
@@ -41,6 +42,7 @@ RUN \
 COPY root/ /
 
 RUN mkdir /scripts && git clone https://github.com/clinton-hall/nzbToMedia.git /scripts && cp /scripts/autoProcessMedia.cfg.spec /scripts/autoProcessMedia.cfg
+RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.6 2 && update-alternatives  --set python /usr/bin/python3.6
 
 # ports and volumes
 EXPOSE 8080 9090
