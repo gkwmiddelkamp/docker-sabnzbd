@@ -45,3 +45,5 @@ RUN mkdir /scripts && git clone https://github.com/clinton-hall/nzbToMedia.git /
 # ports and volumes
 EXPOSE 8080 9090
 VOLUME /config /downloads /incomplete-downloads
+
+CMD ["/usr/bin/sabnzbdplus","--config-file","/config","--server","0.0.0.0:8080"]
