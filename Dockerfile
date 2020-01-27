@@ -1,4 +1,4 @@
-FROM lsiobase/xenial
+FROM ubuntu:bionic
 MAINTAINER Gijs Middelkamp
 
 # set version label
@@ -13,6 +13,8 @@ PYTHONIOENCODING=utf-8
 
 # install packages
 RUN \
+ apt-get update && \
+ apt-get install -y gnupg && \
  echo "deb http://ppa.launchpad.net/jcfp/nobetas/ubuntu xenial main" >> /etc/apt/sources.list.d/sabnzbd.list && \
  echo "deb-src http://ppa.launchpad.net/jcfp/nobetas/ubuntu xenial main" >> /etc/apt/sources.list.d/sabnzbd.list && \
  echo "deb http://ppa.launchpad.net/jcfp/sab-addons/ubuntu xenial main" >> /etc/apt/sources.list.d/sabnzbd.list && \
