@@ -9,7 +9,9 @@ LABEL build_version="gkwmiddelkamp version:- ${VERSION} Build-date:- ${BUILD_DAT
 # environment settings
 ARG DEBIAN_FRONTEND="noninteractive"
 ENV HOME="/config" \
-PYTHONIOENCODING=utf-8
+PYTHONIOENCODING=POSIX \
+LANG=C.UTF-8 \
+LC_ALL=C.UTF-8
 
 # install packages
 RUN \
