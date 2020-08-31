@@ -9,9 +9,9 @@ LABEL build_version="gkwmiddelkamp version:- ${VERSION} Build-date:- ${BUILD_DAT
 # environment settings
 ARG DEBIAN_FRONTEND="noninteractive"
 ENV HOME="/config" \
-PYTHONIOENCODING=POSIX \
-LANG=C.UTF-8 \
-LC_ALL=C.UTF-8
+PYTHONIOENCODING=POSIX
+#LANG=C.UTF-8 \
+#LC_ALL=C.UTF-8
 
 # install packages
 RUN \
@@ -50,4 +50,4 @@ RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.6 2 &&
 EXPOSE 8080 9090
 VOLUME /config /downloads /incomplete-downloads
 
-CMD ["/usr/bin/sabnzbdplus","--config-file","/config","--server","0.0.0.0:8080"]
+CMD ["env","LANG=C.UTF-8","LC_ALL=C.UTF-8", "/usr/bin/sabnzbdplus","--config-file","/config","--server","0.0.0.0:8080"]
