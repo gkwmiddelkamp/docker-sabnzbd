@@ -2,7 +2,7 @@
 SABnzbd makes Usenet as simple and streamlined as possible by automating everything we can. All you have to do is add an .nzb. SABnzbd takes over from there, where it will be automatically downloaded, verified, repaired, extracted and filed away with zero human interaction.
 This image includes nzbToMedia scripts and ffmpeg for processing.
 
-Updated to SABnzbd 3.1.0
+Updated to SABnzbd 3.1.1
 
 ## Usage
 
